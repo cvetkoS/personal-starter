@@ -1,0 +1,66 @@
+//----------  responsive breakpoints
+
+@mixin respond-min($width)
+{
+	@media screen and (min-width: rem($width)) {
+		@content;
+	}
+}
+
+@mixin respond-min-max($w1, $w2)
+{
+	@media screen and (min-width: rem($w1)) and (max-width: rem($w2)) {
+		@content;
+	}
+}
+
+@mixin respond-max($width)
+{
+	@media screen and (max-width: rem($width)) {
+		@content;
+	}
+}
+
+//----------  font smoothing
+@mixin font-smoothing ($val: antialiased) {
+	-webkit-font-smoothing: $val;
+	-moz-font-smoothing: $val;
+	-ms-font-smoothing: $val;
+	-o-font-smoothing: $val;
+}
+
+//----------  Text Overflow
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+//----------  Vertical / horizontal alignment
+@mixin align($position: relative, $direction: x) {
+	position: $position;
+	@if ($direction == 'y') {
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if ($direction == 'xy') {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+// example: @include align(absolute, xy); for centering both axis'
+// default @include align(); will be relative on x axis
+
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

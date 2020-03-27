@@ -1,0 +1,63 @@
+$white: #fff;
+$grey: #444;
+$black: #000;
+
+$font-head: 'Oswald', 'Times New Roman', serif;
+$font-body: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+$font-size-base: rem(16);
+$line-height-base: 1.5;
+$body-min-width: 320px;
+$max-width: 1200px;
+$footer-width: 27;
+$footer-max-width: 400;
+
+// COLORS
+$blue: #498afb;
+$blue-dark: #2674fa;
+$blue-light: #6ca0fc;
+$orange: #fa8142;
+$orange-dark: #f96a1f;
+$orange-light: #fb9865;
+$green: #09c372;
+$green-dark: #07a15e;
+$green-light: #0be586;
+$purple: #9166cc;
+$purple-dark: #7d4bc3;
+$purple-light: #a481d5;
+$yellow: #ffdd57;
+$yellow-dark: #ffd633;
+$yellow-light: #ffe47a;
+$pink: #ff4088;
+$pink-dark: #fd256e;
+$pink-light: #ff649e;
+$white: #fff;
+$gray0: #f8f8f8;
+$gray1: #dbe1e8;
+$gray2: #b2becd;
+$gray3: #6c7983;
+$gray4: #454e56;
+$gray5: #2a2e35;
+$gray6: #12181b;
+$gray7: #010101;
+
+$bp-mini: 540;
+$bp-phone: 767;
+$bp-tablet: 991;
+$bp-desktop: 1200;
+
+$text-color: $gray2;
+$link-color: $white;
+$link-color-hover: $pink;
+$selection-color: $pink-dark;
+$selection-text-color: $white;
+$outline-color: $pink;
+$scrollbar-track-color: $gray6;
+$scrollbar-thumb-color: $gray3;
+$scrollbar-thumb-hover-color: $gray4;
+$nav-background: $gray4;
+$nav-shadow: 0 4px 10px -2px $gray7;
+$main-background: $gray6;
+$footer-background: $gray5;
+$footer-shadow: 4px 0 10px -3px $gray7;
+$footer-shadow-small-screen: 0 -5px 5px -5px $gray7;
+$hr-color: $gray4;

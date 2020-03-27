@@ -1,0 +1,38 @@
+.u-hide {
+	display: none;
+}
+
+.u-show {
+	display: block;
+}
+
+.u-no-margin {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+.u-show-on-mobile {
+	display: none !important;
+	@include respond-max($bp-phone) {
+		display: block !important;
+	}
+}
+
+.u-hidden-on-mobile {
+	display: inline-block !important;
+	@include respond-min($bp-phone) {
+		display: none !important;
+	}
+}
+
+.u-visually-hidden {
+	@include visually-hidden;
+}

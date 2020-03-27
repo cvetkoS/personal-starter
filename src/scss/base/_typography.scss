@@ -1,0 +1,27 @@
+p {
+	color: $text-color;
+	margin: 0;
+	margin-bottom: rem(20);
+
+	@include respond-max($bp-tablet) {
+		margin-bottom: rem(10);
+	}
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color .15s ease-in-out;
+
+	&:hover {
+		color: $link-color-hover;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}

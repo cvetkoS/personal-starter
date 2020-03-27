@@ -1,0 +1,48 @@
+html {
+	font-size: 100%;
+}
+
+html, body {
+	@include font-smoothing(antialiased);
+	height: 100%;
+}
+
+body {
+	font-size: $font-size-base;
+	font-family: $font-body;
+	line-height: $line-height-base;
+	font-style: normal;
+	overflow-x: hidden;
+	min-width: $body-min-width;
+	color: $text-color;
+
+	@media only screen and (max-width: 319px) {
+		width: 320px;
+	}
+}
+
+::selection {
+	background: $selection-color;
+	color: $selection-text-color;
+}
+
+:focus {
+	outline-color: $outline-color;
+}
+
+*::-webkit-scrollbar {
+	height: 4px;
+	width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+	background: $scrollbar-track-color;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: $scrollbar-thumb-color;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: $scrollbar-thumb-hover-color;
+}

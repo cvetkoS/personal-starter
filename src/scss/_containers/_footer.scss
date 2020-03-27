@@ -1,0 +1,55 @@
+.c-footer {
+	width: percentage($footer-width / 100);
+    max-width: rem($footer-max-width);
+	background: $footer-background;
+	box-shadow: $footer-shadow;
+
+	@include respond-max($bp-desktop - 0.2) {
+		width: 100%;
+		max-width: 100%;
+		box-shadow: $footer-shadow-small-screen;
+	}
+
+	.wrapper {
+		padding: rem(42) rem(28);
+		@include respond-min($bp-desktop) {
+			padding: rem(28);
+		}
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $footer-background;
+	}
+
+
+	@include respond-max($bp-desktop - 0.2) {
+		text-align: center;
+	}
+
+	small {
+		font-size: rem(14);
+
+		a {
+			position: relative;
+			&::after {
+				transform: translateY(-150%);
+				opacity: 0;
+				display: block;
+				position: absolute;
+				right: 0;
+				left: 0;
+				width: 100%;
+				height: rem(2);
+				transition: transform .15s ease-in-out, opacity .15s ease-in-out;
+				background: $link-color-hover;
+				content: '';
+			}
+
+			&:hover::after {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
